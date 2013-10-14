@@ -79,7 +79,22 @@
      gitconfig-mode
      gitignore-mode
      clojure-mode
-     nrepl)))
+     nrepl
+     buster-snippets
+     angular-snippets
+     datomic-snippets
+     perspective
+     find-file-in-project
+     expand-region
+     multiple-cursors
+     jump-char
+     wgrep
+     smart-forward
+     change-inner
+     multifiles
+     browse-kill-ring
+     smex
+     ido-ubiquitous)))
 
 (condition-case nil
     (init--install-packages)
