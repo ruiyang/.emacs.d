@@ -25,7 +25,7 @@
 (defun use-default-theme ()
   (interactive)
   (disable-theme 'prez)
-  (load-theme 'default-black)
+  (load-theme 'wheatgrass)
   (when (boundp 'magnars/default-font)
     (set-face-attribute 'default nil :font magnars/default-font)))
 

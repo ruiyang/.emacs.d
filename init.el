@@ -23,7 +23,7 @@
 
 ;; Settings for currently logged in user
 (setq user-settings-dir
-      (concat user-emacs-directory "users/" user-login-name))
+      (concat user-emacs-directory "custom"))
 (add-to-list 'load-path user-settings-dir)
 
 ;; Add external projects to load path
@@ -79,7 +79,6 @@
      gitconfig-mode
      gitignore-mode
      clojure-mode
-     nrepl
      buster-snippets
      angular-snippets
      datomic-snippets
