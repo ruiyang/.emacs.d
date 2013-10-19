@@ -52,4 +52,6 @@
      (define-key wdired-mode-map (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
      (define-key wdired-mode-map (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)))
 
+;; dired-diff
+(define-key dired-mode-map "=" 'dired-diff)
 (provide 'setup-dired)

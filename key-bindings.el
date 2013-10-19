@@ -69,13 +69,6 @@
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
-;; Use shell-like backspace C-h, rebind help to F1
-(define-key key-translation-map [?\C-h] [?\C-?])
-(global-set-key (kbd "<f1>") 'help-command)
-(define-key god-local-mode-map (kbd "h") 'backward-delete-char)
-
-(global-set-key (kbd "M-h") 'kill-region-or-backward-word)
-
 ;; Transpose stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
 (global-set-key (kbd "M-t l") 'transpose-lines)
@@ -331,5 +324,43 @@
 (define-key occur-mode-map (kbd "v") 'occur-mode-display-occurrence)
 (define-key occur-mode-map (kbd "n") 'next-line)
 (define-key occur-mode-map (kbd "p") 'previous-line)
+
+;; my customize key-bindings
+(defun refresh-file ()
+  (interactive)
+  (revert-buffer t t t)
+  )
+(global-set-key [f5] 'refresh-file)
+(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
+(global-set-key [f2] 'find-name-dired)
+(global-set-key [f6] 'find-grep)
+(global-set-key [f7] 'replace-string)
+(global-set-key (kbd "C-f") 'forward-word)
+(global-set-key (kbd "C-b") 'backward-word)
+(global-set-key (kbd "M-f") 'forward-char)
+(global-set-key (kbd "M-b") 'backward-char)
+(global-set-key (kbd "M-d") 'delete-region)
+
+(global-set-key "\C-x[" 'comment-region)
+(global-set-key "\C-x]" 'uncomment-region)
+(global-set-key "\C-x=" 'align-regexp)
+(global-set-key "\C-x+" 'align-repeat)
+(global-set-key "\C-x:" 'erase-buffer)
+
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;; override killing emacs key
+(global-unset-key "\C-xc")
+(global-unset-key "\C-x\C-c")
+(global-unset-key "\C-z")
+(global-unset-key "\C-x\C-z")
+;; Don't want emacs to die easily, so route it to far away key!!!!
+(global-set-key [(f12)] 'save-buffers-kill-emacs)
+;; Don't want to suspend easily
+(global-set-key [(f11)] 'redraw-display)
+
 
 (provide 'key-bindings)

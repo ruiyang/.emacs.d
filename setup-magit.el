@@ -104,4 +104,7 @@
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
 
+;; no highlight on diff section
+(defun magit-highlight-section ())
+
 (provide 'setup-magit)

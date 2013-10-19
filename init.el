@@ -21,6 +21,16 @@
 ;; Set up appearance early
 (require 'appearance)
 
+;; sudo related
+;; C-x C-f /sudo::/etc/hosts
+(require 'tramp)
+
+;; Make Text mode the default mode for new buffers
+(setq-default major-mode 'text-mode)
+
+;; cua selection mode
+(cua-selection-mode t)
+
 ;; Settings for currently logged in user
 (setq user-settings-dir
       (concat user-emacs-directory "custom"))
@@ -88,6 +98,7 @@
      multiple-cursors
      jump-char
      wgrep
+     grep-a-lot
      smart-forward
      change-inner
      multifiles
