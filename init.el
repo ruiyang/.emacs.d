@@ -69,6 +69,8 @@
      god-mode
      gist
      htmlize
+     tagedit
+     simplezen
      visual-regexp
      flycheck
      flx
@@ -81,6 +83,7 @@
      simple-httpd
      guide-key
      nodejs-repl
+     js2-mode
      restclient
      highlight-escape-sequences
      whitespace-cleanup-mode
