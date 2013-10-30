@@ -18,6 +18,12 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
+
+;; Settings for currently logged in user
+(setq user-settings-dir
+      (expand-file-name "users" user-emacs-directory))
+(add-to-list 'load-path user-settings-dir)
+
 ;; Set up appearance early
 (require 'appearance)
 
@@ -30,11 +36,6 @@
 
 ;; cua selection mode
 (cua-selection-mode t)
-
-;; Settings for currently logged in user
-(setq user-settings-dir
-      (concat user-emacs-directory "custom"))
-(add-to-list 'load-path user-settings-dir)
 
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
@@ -239,3 +240,6 @@
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
+
+;;
+(require 'my-init)

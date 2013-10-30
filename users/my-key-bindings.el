@@ -1,4 +1,3 @@
-
 ;; my customize key-bindings
 (defun refresh-file ()
   (interactive)
@@ -15,7 +14,7 @@
 (global-set-key (kbd "M-b") 'backward-char)
 (global-set-key (kbd "M-d") 'delete-region)
 
-(global-set-key "\C-x[" 'comment-region)
+(global-set-key "\C-x[" 'comment-region)	
 (global-set-key "\C-x]" 'uncomment-region)
 (global-set-key "\C-x=" 'align-regexp)
 (global-set-key "\C-x+" 'align-repeat)
