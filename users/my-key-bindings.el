@@ -35,4 +35,4 @@
 ;; Don't want to suspend easily
 (global-set-key [(f11)] 'redraw-display)
 
-(provide 'custom-key-bindings)
+(provide 'my-key-bindings)

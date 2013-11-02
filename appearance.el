@@ -1,13 +1,13 @@
-(setq visible-bell t
-      font-lock-maximum-decoration t
-      color-theme-is-global t
-      truncate-partial-width-windows nil)
+;;(setq visible-bell t
+;;      font-lock-maximum-decoration t
+;;      color-theme-is-global t
+;;      truncate-partial-width-windows nil)
 
-;; Highlight current line
+;;  Highlight current line
 ;; (global-hl-line-mode 1)
 
 ;; Set custom theme path
-(setq custom-theme-directory (concat user-emacs-directory "themes"))
+;; (setq custom-theme-directory (concat user-emacs-directory "themes"))
 
 (dolist
     (path (directory-files custom-theme-directory t "\\w+"))
