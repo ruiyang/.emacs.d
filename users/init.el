@@ -4,7 +4,7 @@
   (shell "1"))
 
 (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
-(SET-DEFAULT 'TRUNCATE-LINES NIL)
+(set-default 'truncate-lines nil)
 
 (require 'my-func)
 (require 'my-key-bindings)
