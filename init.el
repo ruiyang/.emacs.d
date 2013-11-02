@@ -199,6 +199,7 @@
 (require 'smart-forward)
 (require 'change-inner)
 (require 'multifiles)
+(require 'setup-grep)
 
 ;; Fill column indicator
 (require 'fill-column-indicator)
