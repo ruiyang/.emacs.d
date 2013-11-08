@@ -58,6 +58,7 @@
          "target"
          "overlays"
          "build"
-         "vendor")))
+         "vendor"
+         "\.git")))
 
 (provide 'setup-ffip)

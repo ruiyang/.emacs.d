@@ -85,6 +85,8 @@
      guide-key
      nodejs-repl
      js2-mode
+     php-mode
+     yaml-mode
      restclient
      highlight-escape-sequences
      whitespace-cleanup-mode

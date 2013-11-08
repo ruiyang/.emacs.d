@@ -8,4 +8,5 @@
 
 (require 'my-func)
 (require 'my-key-bindings)
+(require 'my-setup-ffip)
 (provide 'my-init)

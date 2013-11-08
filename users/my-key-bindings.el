@@ -12,7 +12,6 @@
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "M-f") 'forward-char)
 (global-set-key (kbd "M-b") 'backward-char)
-(global-set-key (kbd "M-d") 'delete-region)
 
 (global-set-key "\C-x[" 'comment-region)	
 (global-set-key "\C-x]" 'uncomment-region)
