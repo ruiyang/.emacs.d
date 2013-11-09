@@ -6,6 +6,10 @@
 (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
 (set-default 'truncate-lines nil)
 
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq auto-save-file-name-transforms
+      `((".*" "~/.saves" t)))
+
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)
