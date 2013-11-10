@@ -42,4 +42,8 @@ by using nxml's indentation rules."
   (interactive)
   (find-file "~/.emacs.d/help/magit.org"))
 
+(defun vi ()
+  (interactive)
+  (find-file "~/.emacs.d/help/vi.org"))
+
 (provide 'my-func)
