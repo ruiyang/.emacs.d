@@ -10,6 +10,12 @@
 (setq auto-save-file-name-transforms
       `((".*" "~/.saves" t)))
 
+;; resume the window config via revive
+(if (file-exists-p "~/.revive.el")
+    (resume))
+
+(put 'erase-buffer 'disabled nil)
+
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)

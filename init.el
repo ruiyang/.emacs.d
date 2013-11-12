@@ -110,7 +110,8 @@
      multifiles
      browse-kill-ring
      smex
-     ido-ubiquitous)))
+     ido-ubiquitous
+     revive)))
 
 (condition-case nil
     (init--install-packages)
