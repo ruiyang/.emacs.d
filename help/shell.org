@@ -1,4 +1,10 @@
-* list all users
-cat /etc/passwd
+* cat /etc/passwd
+list all users/check home directory
 
-* check home directory
+* uname -a
+check ubuntu version
+
+* df -h check disk usage
+* du -sh /home/  check usage under /home
+* lsof -w -n -i tcp:8080  find process using a port
+
