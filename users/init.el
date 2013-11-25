@@ -19,4 +19,5 @@
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)
+(require 'org-mobile)
 (provide 'my-init)
