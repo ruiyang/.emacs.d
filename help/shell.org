@@ -4,7 +4,21 @@ list all users/check home directory
 * uname -a
 check ubuntu version
 
-* df -h check disk usage
-* du -sh /home/  check usage under /home
-* lsof -w -n -i tcp:8080  find process using a port
+* df -h # check disk usage
+* du -sh /home/  # check usage under /home
+* lsof -w -n -i tcp:8080  # find process using a port
+* gem list | cut -d" " -f1 | xargs gem uninstall -aIx   # remove all gems
+* sudo su -  # switch to root
+* netstat -a # check network port listening etc.
+* bash scripting
+** assign command output to a variable
+VARNAME=$(ps aux | grep [X]vfb)
+Note: no space on both side of '='
+** if else fi
+if [ "$(expr substr $(uname -s) 1 9)" == "CYGWIN_NT" ]; then
+    cmd /c go_ci.bat "$@"
+else
+    bash ./ci_linux.sh "$@"
+fi
 
+* !$ reuse last command's parameter
