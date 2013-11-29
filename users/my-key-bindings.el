@@ -34,4 +34,6 @@
 ;; Don't want to suspend easily
 (global-set-key [(f11)] 'redraw-display)
 
+;; magit
+(global-set-key "\C-xl" 'magit-file-log)
 (provide 'my-key-bindings)
