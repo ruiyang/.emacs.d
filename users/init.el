@@ -15,6 +15,7 @@
     (resume))
 
 (put 'erase-buffer 'disabled nil)
+(elscreen-start)
 
 (require 'my-func)
 (require 'my-key-bindings)

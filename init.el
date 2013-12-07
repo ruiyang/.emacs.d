@@ -95,6 +95,8 @@
      gitconfig-mode
      gitignore-mode
      clojure-mode
+     clojure-test-mode
+     cider
      buster-snippets
      angular-snippets
      datomic-snippets
@@ -111,7 +113,8 @@
      browse-kill-ring
      smex
      ido-ubiquitous
-     revive)))
+     revive
+     elscreen)))
 
 (condition-case nil
     (init--install-packages)

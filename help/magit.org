@@ -37,7 +37,7 @@ C-w	Copy sha1 of current commit into kill ring
 ..	Mark current commit	
 .	Unmark current commit if marked	
 C-u ..	Unmark marked commit from anywhere	
-
+magit-file-log   show file history
 * Reflogs
 h	Browse reflog from HEAD	Reflog buffer works just like History buffer described above.
 H	Browse reflog from chosen point	

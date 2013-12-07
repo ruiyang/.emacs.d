@@ -46,4 +46,12 @@ by using nxml's indentation rules."
   (interactive)
   (find-file "~/.emacs.d/help/vi.org"))
 
+(defun shell-help ()
+  (interactive)
+  (find-file "~/.emacs.d/help/shell.org"))
+
+(defun todo ()
+  (interactive)
+  (find-file "~/Dropbox/Personal/org/todo.org"))
+
 (provide 'my-func)
