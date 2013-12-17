@@ -97,6 +97,7 @@
      clojure-mode
      clojure-test-mode
      cider
+     clj-refactor
      buster-snippets
      angular-snippets
      datomic-snippets
@@ -250,3 +251,7 @@
 
 ;;
 (require 'my-init)
+
+;; not sure why I have to put it here, if in my-init, not working
+(elscreen-start)
+

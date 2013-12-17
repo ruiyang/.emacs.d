@@ -19,8 +19,8 @@
 (global-set-key "\C-x+" 'align-repeat)
 (global-set-key "\C-x:" 'erase-buffer)
 
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-M-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-M-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
@@ -36,4 +36,8 @@
 
 ;; magit
 (global-set-key "\C-xl" 'magit-file-log)
+
+;; elscreen
+(global-set-key (kbd "C-S-<left>") 'elscreen-previous)
+(global-set-key (kbd "C-S-<right>") 'elscreen-next)
 (provide 'my-key-bindings)
