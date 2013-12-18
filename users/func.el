@@ -40,15 +40,15 @@ by using nxml's indentation rules."
 
 (defun magit-help ()
   (interactive)
-  (find-file "~/.emacs.d/help/magit.org"))
+  (find-file "~/.emacs.d/users/help/magit.org"))
 
 (defun vi ()
   (interactive)
-  (find-file "~/.emacs.d/help/vi.org"))
+  (find-file "~/.emacs.d/users/help/vi.org"))
 
 (defun shell-help ()
   (interactive)
-  (find-file "~/.emacs.d/help/shell.org"))
+  (find-file "~/.emacs.d/users/help/shell.org"))
 
 (defun todo ()
   (interactive)
