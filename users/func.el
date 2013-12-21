@@ -38,9 +38,19 @@ by using nxml's indentation rules."
     (shell-command-on-region b e
                              "python -mjson.tool" (current-buffer) t)))
 
+(setq help-location "~/.emacs.d/users/help/")
+(setq helps `("magit" "vi" "shell" "org"))
+
+(dolist (x helps)
+  (let (help-func (make-symbol (concat x "-help")))
+    (defun help-func ()
+      (interactive)
+      (print help-func)
+      (find-file (concat help-location (concat x ".org"))))))
+
 (defun magit-help ()
   (interactive)
-  (find-file "~/.emacs.d/users/help/magit.org"))
+  (find-file (concat help-location "magit.org")))
 
 (defun vi ()
   (interactive)
@@ -49,6 +59,10 @@ by using nxml's indentation rules."
 (defun shell-help ()
   (interactive)
   (find-file "~/.emacs.d/users/help/shell.org"))
+
+(defun org-help ()
+  (interactive)
+  (find-file "~/.emacs.d/users/help/org.org"))
 
 (defun todo ()
   (interactive)

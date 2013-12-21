@@ -1,0 +1,5 @@
+* C-c C-s add schedule time
+* C-c C-d add due date, match to trello due date
+* M-Enter enter a new item
+* S-M-Enter enter a new list itemb
+* C-S-Enter enter a to do

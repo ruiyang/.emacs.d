@@ -21,4 +21,7 @@
 (require 'my-setup-ffip)
 (require 'org-mobile)
 
+(require 'org-trello)
+(add-hook 'org-mode-hook 'org-trello-mode)
+
 (provide 'my-init)
