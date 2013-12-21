@@ -1,3 +1,5 @@
+# [[http://www.commandlinefu.com] [commandlinefu]]
+
 * cat /etc/passwd
 list all users/check home directory
 
@@ -26,3 +28,8 @@ fi
 gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 * show a file
   - tail -f /file/  live updating of a file
+* sed
+** delete a line
+   - by line number
+     sed -i 8d ~/.ssh/known_hosts
+
