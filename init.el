@@ -116,7 +116,8 @@
      ido-ubiquitous
      revive
      elscreen
-     org-trello)))
+     org-trello
+     anti-zenburn-theme)))
 
 (condition-case nil
     (init--install-packages)

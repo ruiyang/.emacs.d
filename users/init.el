@@ -16,6 +16,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
+(load-theme 'wombat t)
+
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)

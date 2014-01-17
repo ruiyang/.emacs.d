@@ -40,4 +40,10 @@
 ;; elscreen
 (global-set-key (kbd "C-S-<left>") 'elscreen-previous)
 (global-set-key (kbd "C-S-<right>") 'elscreen-next)
+(global-set-key "\C-xk" 'kill-this-buffer)
+
+;; increase/decrease fonts
+(global-set-key (kbd "C-M-=") 'text-scale-increase)
+(global-set-key (kbd "C-M--") 'text-scale-decrease)
+
 (provide 'my-key-bindings)
