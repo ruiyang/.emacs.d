@@ -310,3 +310,4 @@ Set	Default	Description
 :set window=n	window = n	Sets number of lines in a text window to n
 :set wm=n	wm = 0	Sets automatic wraparound n spaces from right margin.
 :set ws	ws	Sets automatic wraparound n spaces from right margin.
+* Undo  u

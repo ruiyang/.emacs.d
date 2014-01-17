@@ -99,3 +99,10 @@ F	git pull
 * Interfacing with Subversion
 N r	git svn rebase	
 N c	git svn dcommit
+
+
+* Command Line
+** show all deleted files
+git log --diff-filter=D --summary
+git log --all --pretty=format: --name-only --diff-filter=D | sort -u
+
