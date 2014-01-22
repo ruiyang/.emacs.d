@@ -16,7 +16,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
-(load-theme 'wombat t)
+(load-theme 'molokai)
+(set-face-attribute 'default nil :height 150)
 
 (require 'my-func)
 (require 'my-key-bindings)
@@ -25,5 +26,10 @@
 
 (require 'org-trello)
 (add-hook 'org-mode-hook 'org-trello-mode)
+
+(require 'ob-clojure)
+(setq org-babel-clojure-backend 'cider)
+
+(require 'ob-js)
 
 (provide 'my-init)
