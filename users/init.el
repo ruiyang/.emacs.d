@@ -16,7 +16,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
-(load-theme 'molokai)
+(require 'molokai-theme)
+(load-theme 'molokai t)
 (set-face-attribute 'default nil :height 150)
 
 (require 'my-func)

@@ -22,6 +22,14 @@
 ;; Settings for currently logged in user
 (setq user-settings-dir
       (expand-file-name "users" user-emacs-directory))
+
+(dolist (f (directory-files user-settings-dir))
+  (let ((name (concat user-settings-dir "/" f)))
+    (when (and (file-directory-p name)
+               (not (equal f ".."))
+               (not (equal f ".")))
+      (add-to-list 'load-path name))))
+
 (add-to-list 'load-path user-settings-dir)
 
 ;; Set up appearance early
