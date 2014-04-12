@@ -3,7 +3,9 @@
 (require 'eproject)
 
 ;; Use eproject to find project root
-(setq ffip-project-root-function 'eproject-root)
+(defun current-directory ()
+  (expand-file-name default-directory))
+(setq ffip-project-root-function 'current-directory)
 
 ;; No need to be stingy
 (setq ffip-limit 4096)
@@ -28,7 +30,6 @@
                                    ffip-limit))))))
 
 ;; Helper methods to create local settings
-
 (defun ffip--create-exclude-find-options (names)
   (mapconcat (lambda (name)
                (concat "-not -regex \".*" name ".*\"")) names " "))
@@ -56,8 +57,6 @@
       (ffip--create-exclude-find-options
        '("node_modules"
          "target"
-         "overlays"
-         "build"
          "vendor"
          "\.git")))
 
