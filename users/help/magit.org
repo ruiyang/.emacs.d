@@ -47,6 +47,7 @@ d	Show changes between working tree and HEAD
 D	Show changes between two arbitrary revisions	
 a	Apply current changes to working tree	Change-selection works as described in 'Staging and Committing' above.
 v	Apply current changes to working tree in reverse	
+e       Start ediff
 
 * Tagging
 t	Make lightweight tag	
@@ -106,3 +107,10 @@ N c	git svn dcommit
 git log --diff-filter=D --summary
 git log --all --pretty=format: --name-only --diff-filter=D | sort -u
 
+** export PAGER=cat   ## to get rid of term is not fully functional
+** delete git history
+git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch frontend/vendor/bundle' --prune-empty -- --all
+rm -rf .git/refs/original/
+git reflog expire --expire=now --all
+git gc --prune=now
+git gc --aggressive --prune=now

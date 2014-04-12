@@ -125,7 +125,10 @@
      revive
      elscreen
      org-trello
-     anti-zenburn-theme)))
+     anti-zenburn-theme
+     web-mode
+     elfeed
+     smart-tabs-mode)))
 
 (condition-case nil
     (init--install-packages)
@@ -260,7 +263,9 @@
 
 ;;
 (require 'my-init)
-
+;; Setup org
+(require 'setup-org)
+(require 'setup-elnode)
 ;; not sure why I have to put it here, if in my-init, not working
 (elscreen-start)
 

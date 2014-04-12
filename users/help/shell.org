@@ -33,3 +33,23 @@ gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
    - by line number
      sed -i 8d ~/.ssh/known_hosts
 
+
+
+* packages
+  - dpkg --get-selections | grep -v deinstall
+  - sudo dpkg --configure -a  # fix issues of missing file in apt-get install. normally this means the dpkg is corrupted
+
+* postgres
+** restart
+   sudo /etc/init.d/postgresql restart
+** psql to start command prompt
+** roles
+SELECT rolname FROM pg_roles;
+\du to list all roles
+
+* Date And Time
+  - /etc/timezone for timezone info
+  - date to display date and time
+  - dpkg-reconfigure --frontend noninteractive tzdata
+
+* dpkg-query -L libapache2-mod-jk
