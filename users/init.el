@@ -16,21 +16,24 @@
 
 (put 'erase-buffer 'disabled nil)
 
-(require 'molokai-theme)
-(load-theme 'molokai t)
+;; (require 'molokai-theme)
+(load-theme 'wheatgrass)
 (set-face-attribute 'default nil :height 150)
 
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)
-(require 'org-mobile)
+
 
 (require 'org-trello)
-(add-hook 'org-mode-hook 'org-trello-mode)
+;; (add-hook 'org-mode-hook 'org-trello-mode)
 
 (require 'ob-clojure)
 (setq org-babel-clojure-backend 'cider)
 
 (require 'ob-js)
+
+(require 'setup-elfeed)
+(require 'setup-tab)
 
 (provide 'my-init)

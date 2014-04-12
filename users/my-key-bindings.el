@@ -21,8 +21,8 @@
 
 (global-set-key (kbd "S-M-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-M-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+(global-set-key (kbd "C-S-<left>") 'shrink-window)
+(global-set-key (kbd "C-S-<right>") 'enlarge-window)
 
 ;; override killing emacs key
 (global-unset-key "\C-xc")

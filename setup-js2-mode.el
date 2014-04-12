@@ -260,4 +260,7 @@
     (unless first-line
       (indent-line-to offset))))
 
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
 (provide 'setup-js2-mode)

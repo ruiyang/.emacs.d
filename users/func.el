@@ -38,6 +38,12 @@ by using nxml's indentation rules."
     (shell-command-on-region b e
                              "python -mjson.tool" (current-buffer) t)))
 
+(defun sudo-edit (&optional arg)
+  (interactive "p")
+  (if (not buffer-file-name)
+      (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
 (setq help-location "~/.emacs.d/users/help/")
 (setq helps `("magit" "vi" "shell" "org"))
 

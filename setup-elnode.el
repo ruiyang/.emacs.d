@@ -6,4 +6,10 @@
 ;; Some more nice autoloads
 (autoload 'elnode-webserver-handler-maker "elnode")
 
+;; Set docroot to custom path, not bothering dropbox version
+(or (file-exists-p "~/.elnode")
+    (make-directory "~/.elnode"))
+
+(setq elnode-webserver-docroot "~/.elnode/")
+(setq elnode-webserver-docroot-default "~/.elnode/")
 (provide 'setup-elnode)
