@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: desc
+# key: desc
+# --
+describe("$1", function () {
+  it("should $2", function() {
+    $0
+  });
+});
