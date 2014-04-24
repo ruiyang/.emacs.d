@@ -53,3 +53,6 @@ SELECT rolname FROM pg_roles;
   - dpkg-reconfigure --frontend noninteractive tzdata
 
 * dpkg-query -L libapache2-mod-jk
+* grep
+  - grep -F /str/    grep plain string
+  - grep -E grep extended regular expression

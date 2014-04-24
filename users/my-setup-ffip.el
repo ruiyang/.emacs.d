@@ -1,5 +1,5 @@
 (setq ffip-patterns
-  '("*.*"))
+  '("*"))
 
 (setq ffip-find-options
       (ffip--create-exclude-find-options

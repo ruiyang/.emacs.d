@@ -23,6 +23,9 @@
 (setq user-settings-dir
       (expand-file-name "users" user-emacs-directory))
 
+(setq user-themes-dir
+      (expand-file-name "users/themes" user-emacs-directory))
+
 (dolist (f (directory-files user-settings-dir))
   (let ((name (concat user-settings-dir "/" f)))
     (when (and (file-directory-p name)
@@ -30,6 +33,7 @@
                (not (equal f ".")))
       (add-to-list 'load-path name))))
 
+(add-to-list 'load-path user-themes-dir)
 (add-to-list 'load-path user-settings-dir)
 
 ;; Set up appearance early
@@ -128,7 +132,8 @@
      anti-zenburn-theme
      web-mode
      elfeed
-     smart-tabs-mode)))
+     smart-tabs-mode
+     ggtags)))
 
 (condition-case nil
     (init--install-packages)

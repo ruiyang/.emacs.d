@@ -4,6 +4,7 @@
 ;;   (shell "1"))
 
 (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 (set-default 'truncate-lines nil)
 
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -16,8 +17,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
-;; (require 'molokai-theme)
-(load-theme 'wheatgrass)
+(require 'sanityinc-theme-init)
+(dark)
 (set-face-attribute 'default nil :height 150)
 
 (require 'my-func)
