@@ -46,4 +46,7 @@
 (global-set-key (kbd "C-M-=") 'text-scale-increase)
 (global-set-key (kbd "C-M--") 'text-scale-decrease)
 
+;; copy file name to clipboard
+(global-set-key (kbd "C-S-c") 'copy-file-name-to-clipboard)
+
 (provide 'my-key-bindings)

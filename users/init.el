@@ -37,4 +37,5 @@
 (require 'setup-elfeed)
 (require 'setup-tab)
 
+(require 'setup-ggtags)
 (provide 'my-init)
