@@ -56,3 +56,8 @@ SELECT rolname FROM pg_roles;
 * grep
   - grep -F /str/    grep plain string
   - grep -E grep extended regular expression
+
+* grunt
+** grunt warning:watch ENOSPC
+fix: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+* [[http://www.gnu.org/software/bash/manual/bash.html#Bash-Conditional-Expressions][Bash Reference Manual]]

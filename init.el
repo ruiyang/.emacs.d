@@ -133,7 +133,8 @@
      web-mode
      elfeed
      smart-tabs-mode
-     ggtags)))
+     ggtags
+     company)))
 
 (condition-case nil
     (init--install-packages)
@@ -271,6 +272,3 @@
 ;; Setup org
 (require 'setup-org)
 (require 'setup-elnode)
-;; not sure why I have to put it here, if in my-init, not working
-(elscreen-start)
-
