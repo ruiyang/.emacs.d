@@ -38,4 +38,5 @@
 (require 'setup-tab)
 
 (require 'setup-ggtags)
+(require 'setup-cider)
 (provide 'my-init)

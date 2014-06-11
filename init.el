@@ -101,6 +101,7 @@
      simple-httpd
      guide-key
      nodejs-repl
+     js2-refactor
      js2-mode
      php-mode
      yaml-mode
@@ -134,7 +135,6 @@
      revive
      elscreen
      org-trello
-     anti-zenburn-theme
      web-mode
      elfeed
      smart-tabs-mode

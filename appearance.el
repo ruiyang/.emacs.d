@@ -37,7 +37,7 @@
 
 (global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
 
-(use-default-theme)
+;; (use-default-theme)
 
 ;; Don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
