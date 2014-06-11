@@ -61,3 +61,30 @@ SELECT rolname FROM pg_roles;
 ** grunt warning:watch ENOSPC
 fix: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 * [[http://www.gnu.org/software/bash/manual/bash.html#Bash-Conditional-Expressions][Bash Reference Manual]]
+* environment variable
+  - unset <env>
+* php
+  - php --ini show loaded config
+  - restart webserver after restart
+* mysql
+  - mysql -h localhost -u wordpress -p
+** remove mysql ubuntu
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get autoremove
+sudo apt-get autoclean
+----
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo deluser mysql
+sudo rm -rf /var/lib/mysql
+sudo apt-get purge mysql-server-core-5.5
+sudo apt-get purge mysql-client-core-5.5
+** create user
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'monty'@'localhost'
+    ->     IDENTIFIED BY 'some_pass' WITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'monty'@'%'
+    ->     IDENTIFIED BY 'some_pass' WITH GRANT OPTION;
+mysql> GRANT RELOAD,PROCESS ON *.* TO 'admin'@'localhost';
+mysql> GRANT USAGE ON *.* TO 'dummy'@'localhost';
+
+** create database
+create database <db>
