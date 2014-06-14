@@ -32,7 +32,7 @@
 ;; Don't want emacs to die easily, so route it to far away key!!!!
 (global-set-key [(f12)] 'save-buffers-kill-emacs)
 ;; Don't want to suspend easily
-(global-set-key [(f11)] 'redraw-display)
+(global-set-key [(f11)] 'open-buffer-path)
 
 ;; magit
 (global-set-key "\C-xl" 'magit-file-log)

@@ -84,4 +84,9 @@ by using nxml's indentation rules."
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
+(defun open-buffer-path ()
+   "Run explorer on the directory of the current buffer."
+   (interactive)
+   (shell-command (concat "nautilus " (buffer-file-name))))
+
 (provide 'my-func)
