@@ -36,6 +36,7 @@
 (add-to-list 'load-path user-themes-dir)
 (add-to-list 'load-path user-settings-dir)
 
+(require 'dash)
 ;; Set up appearance early
 (require 'appearance)
 
@@ -70,7 +71,7 @@
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+(setq save-place-file (expand-file-name ".places" "~/.emacs_tmp"))
 
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
@@ -114,6 +115,7 @@
      gitignore-mode
      clojure-mode
      clojure-test-mode
+     clojure-cheatsheet
      cider
      clj-refactor
      buster-snippets
@@ -139,7 +141,9 @@
      elfeed
      smart-tabs-mode
      ggtags
-     company)))
+     company
+     color-theme-sanityinc-solarized
+     color-theme-sanityinc-tomorrow)))
 
 (condition-case nil
     (init--install-packages)
