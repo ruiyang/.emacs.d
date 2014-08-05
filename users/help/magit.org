@@ -114,3 +114,8 @@ rm -rf .git/refs/original/
 git reflog expire --expire=now --all
 git gc --prune=now
 git gc --aggressive --prune=now
+** create a patch with specified files
+git format-patch master <..files..>  --stdout > remove_start_date.patch
+git apply --stat fix_empty_poster.patch
+git apply --check fix_empty_poster.patch
+git am --signoff < fix_empty_poster.patch -- real apply

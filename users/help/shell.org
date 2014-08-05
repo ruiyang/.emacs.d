@@ -40,6 +40,18 @@ gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
   - sudo dpkg --configure -a  # fix issues of missing file in apt-get install. normally this means the dpkg is corrupted
 
 * postgres
+** create custom users
+   - su - postgres  // switch to default admin user
+   - createuser -s -P // <username> create a super user with password prompt
+   - dropuser // to delete a role
+** create database
+   - createdb clojure
+   - psql -d clojure
+   - grant all privileges on database clojure to clojure_user
+   - modify pg_hba.conf to use md5 password authentication for localhost
+** userful psql command
+   - sudo su - postgres //switch to postgres super user
+   - psql -d <database> //connect to the database as postgres
 ** restart
    sudo /etc/init.d/postgresql restart
 ** psql to start command prompt
