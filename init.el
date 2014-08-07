@@ -18,7 +18,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-
 ;; Settings for currently logged in user
 (setq user-settings-dir
       (expand-file-name "users" user-emacs-directory))
@@ -36,7 +35,6 @@
 (add-to-list 'load-path user-themes-dir)
 (add-to-list 'load-path user-settings-dir)
 
-(require 'dash)
 ;; Set up appearance early
 (require 'appearance)
 

@@ -39,4 +39,6 @@
 
 (require 'setup-ggtags)
 (require 'setup-cider)
+
+(require 'setup-company)
 (provide 'my-init)
