@@ -12,6 +12,7 @@
       `((".*" "~/.saves" t)))
 
 ;; resume the window config via revive
+(require 'revive)
 (if (file-exists-p "~/.revive.el")
     (resume))
 
