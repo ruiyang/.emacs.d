@@ -13,6 +13,7 @@
 ;; Set up load path
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
+(add-to-list 'load-path (expand-file-name "github" user-emacs-directory))
 
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -75,6 +76,16 @@
 (setq is-mac (equal system-type 'darwin))
 
 ;; Setup packages
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+(package-initialize)
+
+(unless (file-exists-p "~/.emacs.d/elpa/archives/melpa-stable")
+  (package-refresh-contents))
+
+(when (not (package-installed-p 'dash))
+      (package-install 'dash))
 (require 'setup-package)
 
 ;; Install extensions if they're missing
@@ -82,60 +93,28 @@
   (packages-install
    '(magit
      paredit
-     move-text
-     god-mode
      gist
-     htmlize
      tagedit
      simplezen
-     visual-regexp
      flycheck
      flx
      flx-ido
-     css-eldoc
      yasnippet
-     smartparens
-     ido-vertical-mode
-     ido-at-point
      simple-httpd
-     guide-key
-     nodejs-repl
-     js2-refactor
      js2-mode
-     php-mode
-     yaml-mode
-     restclient
-     highlight-escape-sequences
      whitespace-cleanup-mode
-     elisp-slime-nav
-     git-commit-mode
-     gitconfig-mode
-     gitignore-mode
      clojure-mode
-     clojure-test-mode
      clojure-cheatsheet
      cider
      clj-refactor
-     buster-snippets
      angular-snippets
-     datomic-snippets
      perspective
      find-file-in-project
      expand-region
      multiple-cursors
-     jump-char
-     wgrep
-     grep-a-lot
-     smart-forward
-     change-inner
-     multifiles
      browse-kill-ring
      smex
      ido-ubiquitous
-     revive
-     elscreen
-     org-trello
-     web-mode
      elfeed
      smart-tabs-mode
      ggtags
@@ -157,17 +136,6 @@
   (require-package 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
-;; guide-key
-(require 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
-(guide-key-mode 1)
-(setq guide-key/recursive-key-sequence-flag t)
-(setq guide-key/popup-window-position 'bottom)
-
-;; god-mode
-(require 'god-mode)
-(global-set-key (kbd "<escape>") 'god-local-mode)
-
 ;; Setup extensions
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'dired '(require 'setup-dired))
@@ -180,16 +148,6 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
-
-;; Default setup of smartparens
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(--each '(css-mode-hook
-          restclient-mode-hook
-          js-mode-hook
-          ruby-mode
-          markdown-mode)
-  (add-hook it 'turn-on-smartparens-mode))
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
@@ -206,16 +164,6 @@
 ;; Map files to modes
 (require 'mode-mappings)
 
-;; Highlight escape sequences
-(require 'highlight-escape-sequences)
-(hes-mode)
-(put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
-
-;; Visual regexp
-(require 'visual-regexp)
-(define-key global-map (kbd "M-&") 'vr/query-replace)
-(define-key global-map (kbd "M-/") 'vr/replace)
-
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
 (dolist (file (directory-files defuns-dir t "\\w+"))
@@ -225,12 +173,7 @@
 (require 'expand-region)
 (require 'multiple-cursors)
 (require 'delsel)
-(require 'jump-char)
 (require 'eproject)
-(require 'wgrep)
-(require 'smart-forward)
-(require 'change-inner)
-(require 'multifiles)
 (require 'setup-grep)
 
 ;; Fill column indicator
@@ -248,17 +191,12 @@
 ;; Setup key bindings
 (require 'key-bindings)
 
+;; setup yaml
+(require 'setup-yaml)
 ;; Misc
 (require 'project-archetypes)
 (require 'my-misc)
 (when is-mac (require 'mac))
-
-;; Elisp go-to-definition with M-. and back again with M-,
-(autoload 'elisp-slime-nav-mode "elisp-slime-nav")
-(add-hook 'emacs-lisp-mode-hook (lambda () (elisp-slime-nav-mode t) (eldoc-mode 1)))
-
-;; Email, baby
-(require 'setup-mu4e)
 
 ;; Emacs server
 (require 'server)
