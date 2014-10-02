@@ -37,4 +37,5 @@
 (require 'setup-cider)
 
 (require 'setup-company)
+(require 'setup-mozrepl)
 (provide 'my-init)

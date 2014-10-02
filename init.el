@@ -102,6 +102,7 @@
      yasnippet
      simple-httpd
      js2-mode
+;;     js2-refactor
      whitespace-cleanup-mode
      clojure-mode
      clojure-cheatsheet
@@ -120,7 +121,8 @@
      ggtags
      company
      color-theme-sanityinc-solarized
-     color-theme-sanityinc-tomorrow)))
+     color-theme-sanityinc-tomorrow
+     moz)))
 
 (condition-case nil
     (init--install-packages)
