@@ -119,3 +119,7 @@ git format-patch master <..files..>  --stdout > remove_start_date.patch
 git apply --stat fix_empty_poster.patch
 git apply --check fix_empty_poster.patch
 git am --signoff < fix_empty_poster.patch -- real apply
+** setup emacs as client
+   - git config --global core.editor 'emacsclient'
+   - export VISUAL=emacsclient
+   - after finish editing, using M-x git-commit-commit
