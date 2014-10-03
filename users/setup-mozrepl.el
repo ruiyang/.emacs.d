@@ -5,6 +5,7 @@
                       (concat "repl.enter(content);"
                               cmd
                               "repl.back();")))
+
 ;customized javascript works with jasmine 1.3.1
 (defun jasmine-with-current-buffer ()
   (interactive)
