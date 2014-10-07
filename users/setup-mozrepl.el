@@ -1,23 +1,5 @@
 (require 'moz)
 
-(defun moz-goto-content-and-run-cmd (cmd)
-  (comint-send-string (inferior-moz-process)
-                      (concat "repl.enter(content);"
-                              cmd
-                              "repl.back();")))
-
-(defun moz--eval-current-buffer ()
-  (interactive)
-  (moz-minor-mode 1)
-  ;; flush mozrepl at first
-  (moz-goto-content-and-run-cmd "console.log('hello');")
-  ;; read the content of js-file
-  (let (cmd)
-    (setq cmd (buffer-substring-no-properties
-               (point-min)
-               (point-max)))
-    (moz-goto-content-and-run-cmd cmd)))
-
 ;; customized javascript works with jasmine 1.3.1
 (defun jasmine-with-current-buffer ()
   (interactive)
