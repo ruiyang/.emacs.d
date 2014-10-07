@@ -6,11 +6,6 @@
                               cmd
                               "repl.back();")))
 
-(comint-send-string (inferior-moz-process)
-                    (concat "repl.enter(content);"
-                            "console.log(\"b\");"
-                            "repl.back();"))
-
 (defun moz--eval-current-buffer ()
   (interactive)
   (moz-minor-mode 1)
@@ -29,7 +24,7 @@
   (let (cmd)
     (setq cmd
           (format
-           "%s;%s;%s;" "console.log('hello');jasmine.getEnv().currentRunner_ = new jasmine.Runner(jasmine.getEnv());jasmine.getEnv().reporter.subReporters_=[];jasmine.ConsoleReporter.prototype.log=function(str, color){console.log(str)};jasmine.getEnv().addReporter(new jasmine.ConsoleReporter(console.log));SpecHelper.specMatcher=/.*/"
+           "%s;%s;%s;" "console.log('hello');$('.jasmine_reporter').remove();jasmine.getEnv().currentRunner_ = new jasmine.Runner(jasmine.getEnv());jasmine.getEnv().reporter.subReporters_=[];jasmine.getEnv().addReporter(new jasmine.HtmlReporter());SpecHelper.specMatcher=/.*/"
            (buffer-substring-no-properties
             (point-min)
             (point-max))
