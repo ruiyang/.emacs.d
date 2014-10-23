@@ -18,6 +18,10 @@
 
 (put 'erase-buffer 'disabled nil)
 
+;; evil mode
+(require 'evil)
+(evil-mode 1)
+
 (require 'sanityinc-theme-init)
 (dark)
 (set-face-attribute 'default nil :height 150)
