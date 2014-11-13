@@ -19,9 +19,9 @@
 (put 'erase-buffer 'disabled nil)
 
 ;; evil mode
-(require 'evil)
-(evil-mode 1)
-(setq evil-default-cursor t)
+;; (require 'evil)
+;; (evil-mode 1)
+;; (setq evil-default-cursor t)
 
 (require 'sanityinc-theme-init)
 (dark)
