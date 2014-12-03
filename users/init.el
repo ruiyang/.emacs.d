@@ -27,6 +27,9 @@
 (dark)
 (set-face-attribute 'default nil :height 150)
 
+;; smartparens
+(require 'smartparens-config)
+
 (require 'my-func)
 (require 'my-key-bindings)
 (require 'my-setup-ffip)

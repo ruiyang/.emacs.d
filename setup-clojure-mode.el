@@ -11,7 +11,10 @@
 (cljr-add-keybindings-with-modifier "C-s-")
 (define-key clj-refactor-map (kbd "C-x C-r") 'cljr-rename-file)
 
-(add-hook 'clojure-mode-hook (lambda () (clj-refactor-mode 1)))
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (clj-refactor-mode 1)
+            (smartparens-mode 1)))
 
 (define-key clojure-mode-map (kbd "s-j") 'clj-jump-to-other-file)
 
@@ -41,6 +44,5 @@
 
 ;; Enable eldoc in Clojure buffers
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-
 
 (provide 'setup-clojure-mode)

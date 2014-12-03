@@ -117,7 +117,7 @@
      smex
      ido-ubiquitous
      elfeed
-     smart-tabs-mode
+     smartparens
      ggtags
      company
      color-theme-sanityinc-solarized
