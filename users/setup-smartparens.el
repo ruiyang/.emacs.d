@@ -5,15 +5,15 @@
 (eval-after-load "ruby-mode"     '(require 'smartparens-ruby))
 
 ;; (sp-use-smartparens-bindings)
-(define-key sp-keymap (kbd "C-S-n") 'sp-forward-sexp)
-(define-key sp-keymap (kbd "C-S-p") 'sp-backward-sexp)
+(define-key sp-keymap (kbd "C-S-f") 'sp-forward-sexp)
+(define-key sp-keymap (kbd "C-S-b") 'sp-backward-sexp)
 
-(define-key sp-keymap (kbd "C-S-f") 'sp-down-sexp)
-(define-key sp-keymap (kbd "C-S-b") 'sp-up-sexp)
+(define-key sp-keymap (kbd "C-S-n") 'sp-down-sexp)
+(define-key sp-keymap (kbd "C-S-p") 'sp-up-sexp)
 
 (define-key sp-keymap (kbd "C-M-a") 'sp-backward-down-sexp)
 (define-key sp-keymap (kbd "C-S-a") 'sp-beginning-of-sexp)
-(define-key sp-keymap (kbd "C-S-d") 'sp-end-of-sexp)
+(define-key sp-keymap (kbd "C-S-e") 'sp-end-of-sexp)
 
 (define-key emacs-lisp-mode-map (kbd ")") 'sp-up-sexp)
 (define-key sp-keymap (kbd "C-M-u") 'sp-backward-up-sexp)
@@ -22,13 +22,13 @@
 (define-key sp-keymap (kbd "C-M-n") 'sp-next-sexp)
 (define-key sp-keymap (kbd "C-M-p") 'sp-previous-sexp)
 
-(define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp)
-(define-key sp-keymap (kbd "C-M-w") 'sp-copy-sexp)
+(define-key sp-keymap (kbd "C-S-k") 'sp-kill-sexp)
+(define-key sp-keymap (kbd "C-S-w") 'sp-copy-sexp)
 
-(define-key sp-keymap (kbd "M-<delete>") 'sp-unwrap-sexp)
-(define-key sp-keymap (kbd "M-<backspace>") 'sp-backward-unwrap-sexp)
+(define-key sp-keymap (kbd "M-<backspace>") 'sp-unwrap-sexp)
+(define-key sp-keymap (kbd "M-delete>") 'sp-backward-unwrap-sexp)
 
-(define-key sp-keymap (kbd "C-<right>") 'sp-forward-slurp-sexp)
+(define-key sp-keymap (kbd "C-<right>" 'sp-forward-slurp-sexp))
 (define-key sp-keymap (kbd "C-<left>") 'sp-forward-barf-sexp)
 (define-key sp-keymap (kbd "C-M-<left>") 'sp-backward-slurp-sexp)
 (define-key sp-keymap (kbd "C-M-<right>") 'sp-backward-barf-sexp)
