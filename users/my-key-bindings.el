@@ -37,9 +37,6 @@
 ;; magit
 (global-set-key "\C-xl" 'magit-file-log)
 
-;; elscreen
-(global-set-key (kbd "C-S-<left>") 'elscreen-previous)
-(global-set-key (kbd "C-S-<right>") 'elscreen-next)
 (global-set-key "\C-xk" 'kill-this-buffer)
 
 ;; increase/decrease fonts
