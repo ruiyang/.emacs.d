@@ -45,5 +45,6 @@
 
 ;; copy file name to clipboard
 (global-set-key (kbd "C-S-c") 'copy-file-name-to-clipboard)
+(global-set-key (kbd "S-<SPC>") 'company-complete)
 
 (provide 'my-key-bindings)

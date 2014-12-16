@@ -44,4 +44,6 @@
 (require 'setup-company)
 (require 'setup-mozrepl)
 (require 'setup-smartparens)
+(add-hook 'after-init-hook 'global-company-mode)
+
 (provide 'my-init)
