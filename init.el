@@ -120,8 +120,7 @@
      smartparens
      ggtags
      company
-     color-theme-sanityinc-solarized
-     color-theme-sanityinc-tomorrow
+     solarized-theme
      moz)))
 
 (condition-case nil

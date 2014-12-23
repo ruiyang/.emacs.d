@@ -23,8 +23,8 @@
 ;; (evil-mode 1)
 ;; (setq evil-default-cursor t)
 
-(require 'sanityinc-theme-init)
-(dark)
+(require 'solarized-theme)
+(color-theme-sanityinc-solarized-dark)
 (set-face-attribute 'default nil :height 150)
 
 (require 'my-func)
