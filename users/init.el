@@ -23,6 +23,7 @@
 ;; (evil-mode 1)
 ;; (setq evil-default-cursor t)
 
+(require 'my-custom)
 (require 'solarized-theme)
 (color-theme-sanityinc-solarized-dark)
 (set-face-attribute 'default nil :height 150)
