@@ -25,7 +25,7 @@
 
 (require 'my-custom)
 (require 'solarized-theme)
-(color-theme-sanityinc-solarized-dark)
+(load-theme 'solarized-dark t)
 (set-face-attribute 'default nil :height 150)
 
 (require 'my-func)
