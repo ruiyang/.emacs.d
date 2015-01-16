@@ -77,10 +77,14 @@
 
 ;; Setup packages
 (require 'package)
+(set 'package-archives '())
+
 (add-to-list 'package-archives
   '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
-(package-initialize)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 
+(package-initialize)
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa-stable")
   (package-refresh-contents))
 

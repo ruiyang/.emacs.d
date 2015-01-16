@@ -1,7 +1,6 @@
 (require 'package)
 (require 'dash)
 
-;; Add melpa to package repos
 (defun packages-install (packages)
   (--each packages
     (when (not (package-installed-p it))
