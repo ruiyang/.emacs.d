@@ -18,13 +18,6 @@
 
 (put 'erase-buffer 'disabled nil)
 
-
-;; maximize the frame
-(modify-frame-parameters
- nil
- `((fullscreen
-    . ,'maximized)))
-
 ;; evil mode
 ;; (require 'evil)
 ;; (evil-mode 1)
