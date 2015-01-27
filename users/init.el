@@ -18,7 +18,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
-;; evil mode
+(toggle-frame-maximized)
+;; evil mde
 ;; (require 'evil)
 ;; (evil-mode 1)
 ;; (setq evil-default-cursor t)
