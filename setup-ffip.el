@@ -2,15 +2,8 @@
 (require 's)
 (require 'eproject)
 
-;; Use eproject to find project root
-(defun current-directory ()
-  (expand-file-name default-directory))
-(setq ffip-project-root-function 'current-directory)
-
 ;; No need to be stingy
 (setq ffip-limit 4096)
-
-;; Use full project path for ffip
 
 (defun ffip-project-files ()
   "Return an alist of all filenames in the project and their path."
@@ -58,6 +51,11 @@
        '("node_modules"
          "target"
          "vendor"
-         "\.git")))
+         "\.git"
+         "\.png"
+         "\.jpg"
+         "\.gif"
+         "\.svg"
+         "/cache/")))
 
 (provide 'setup-ffip)
