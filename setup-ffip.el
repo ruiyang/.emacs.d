@@ -56,6 +56,8 @@
          "\.jpg"
          "\.gif"
          "\.svg"
-         "/cache/")))
+         "/cache/"
+         "/build/"
+         "\.emacs-project")))
 
 (provide 'setup-ffip)
