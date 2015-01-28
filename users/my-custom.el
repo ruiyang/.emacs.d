@@ -6,4 +6,7 @@
  '(comint-highlight-prompt ((t (:inherit minibuffer-prompt :foreground "green"))))
  '(compilation-info ((t (:foreground "green" :underline nil :weight normal)))))
 
+(custom-set-variables
+ '(smooth-scroll-margin 3))
+
 (provide 'my-custom)
