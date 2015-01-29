@@ -125,7 +125,8 @@
      ggtags
      company
      solarized-theme
-     moz)))
+     moz
+     skewer-mode)))
 
 (condition-case nil
     (init--install-packages)
