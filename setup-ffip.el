@@ -4,6 +4,7 @@
 
 ;; No need to be stingy
 (setq ffip-limit 4096)
+(setq ffip-project-file ".emacs-project")
 
 (defun ffip-project-files ()
   "Return an alist of all filenames in the project and their path."
@@ -21,6 +22,7 @@
                                    (ffip-join-patterns)
                                    ffip-find-options
                                    ffip-limit))))))
+
 
 ;; Helper methods to create local settings
 (defun ffip--create-exclude-find-options (names)
