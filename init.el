@@ -202,7 +202,7 @@
 ;; Misc
 (require 'project-archetypes)
 (require 'my-misc)
-;; (when is-mac (require 'mac))
+(when is-mac (require 'mac))
 
 ;; Emacs server
 (require 'server)
